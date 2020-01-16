@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/cosmo/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
     <link
@@ -23,31 +19,52 @@
   </head>
   <body>
     <h1>Weather Dashboard</h1>
-    <div id="left-box">
-      <div class="search-bar-header">Search for a City:</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <!-- THIS IS SIDEBAR -->
+          <div id="left-box">
+            <div class="search-bar-header">Search for a City:</div>
 
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            <div id="search-bar" class="input-group mb-3">
+              <input
+                id="search-input"
+                type="text"
+                class="form-control"
+                placeholder="City"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="search-button"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <div></div>
+
+            <div class="card">
+              <ul class="list-group">
+                <li class="list-group-item">Austin</li>
+                <li class="list-group-item">Chigaco</li>
+                <li class="list-group-item">New York</li>
+                <li class="list-group-item">Orlando</li>
+                <li class="list-group-item">San Francisco</li>
+                <li class="list-group-item">Seattle</li>
+                <li class="list-group-item">Denver</li>
+                <li class="list-group-item">Atlanta</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <button type="submit"></button>
-
-      <div></div>
-
-      <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Austin</li>
-          <li class="list-group-item">Chigaco</li>
-          <li class="list-group-item">New York</li>
-          <li class="list-group-item">Orlando</li>
-          <li class="list-group-item">San Francisco</li>
-          <li class="list-group-item">Seattle</li>
-          <li class="list-group-item">Denver</li>
-          <li class="list-group-item">Atlanta</li>
-        </ul>
+        <div class="col-12 col-md-9">
+          <!-- THIS IS FOR CONTENT -->
+        </div>
       </div>
     </div>
 

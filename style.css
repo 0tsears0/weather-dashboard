@@ -12,6 +12,15 @@ h1 {
 
 }
 
+.form-control {
+  padding: 10px 20px 10px 20px;
+}
+
+#search-bar {
+  max-width: "4";
+}
+
 #left-box {
   background-color: lightgray;
+  padding: 10px;
 }
