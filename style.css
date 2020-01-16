@@ -1,0 +1,18 @@
+h1 {
+  background-color: slategray;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 15px 20px 15px 20px;
+}
+
+.search-bar-header {
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+.search-bar {
+  
+}
+
