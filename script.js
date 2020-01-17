@@ -20,6 +20,7 @@ function getWeather() {
     url: URL
 // returned response
   }).then(function (response) {
+    console.log(response)
     $("#search-input").val("")
 // declared and set temp, humidity, windSpeed, and cityName to value from weather data
     let temp = response.main.temp
@@ -41,8 +42,35 @@ function getWeather() {
       `
 // appended everything prior to cardDiv
     ).appendTo(cardDiv)
-
+    
+    fiveDayForecast(cityName);
   })
+}
+
+function fiveDayForecast(city) {
+  console.log(city);
+
+  // build queryUrl for forecast and pass in city
+let fiveDay = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&APPID=${apiKey}`
+  // make ajax request
+  $.ajax({
+    method: "GET",
+    url: fiveDay
+    // inside of .then()
+  }).then(function (weatherResponse) {
+    // filter for just 5 days
+    var fiveDayArr = weatherResponse.list.filter(function(weatherObj) {
+      if (weatherObj.dt_txt.includes('06:00:00')) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    });
+    console.log(fiveDayArr)
+})
+
+  
 }
 // created click event for search-button which retrieves weather value from weather site
 $("#search-button").on("click", getWeather);
