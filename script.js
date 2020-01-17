@@ -68,8 +68,16 @@ let fiveDay = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=i
       }
     });
     console.log(fiveDayArr)
+// created for loop to run through 5 day values
+    for (var i = 0; i < fiveDayArr.length; i++) {
+      var date = fiveDayArr[i].dt_txt
+      console.log(date)
+      var temp = fiveDayArr[i].main.temp
+      console.log(temp)
+      var humidityFive = fiveDayArr[i].main.humidity
+        console.log(humidityFive)
+    }
 })
-
   
 }
 // created click event for search-button which retrieves weather value from weather site
