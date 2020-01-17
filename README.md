@@ -1,1 +1,3 @@
 # weather-dashboard
+
+This weather project focused on producing a page that captures a city input and uses a remote API to pull data values for current weather, 5-day forecast, uv index, and storing search history. The current weather displays that city's temperature, humidity, windspeed, and uv index for today's date. Additionally, that city's 5-day forecast is also displayed at the bottom of the page listing date, temperature, and humidity. 
