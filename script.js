@@ -13,7 +13,7 @@ function getWeather() {
   // declared city variable to #search-input location and got value of search input
   let city = $("#search-input").val();
   // declared URL variable and set value to api url. Switched units to imperial.
-  let URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`;
+  let URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`;
   // made get request from URL
   $.ajax({
     method: "GET",
@@ -60,7 +60,7 @@ function fiveDayForecast(city) {
   console.log(city);
 
   // build queryUrl for forecast and pass in city
-  let fiveDay = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&APPID=${apiKey}`;
+  let fiveDay = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&APPID=${apiKey}`;
   // make ajax request
   $.ajax({
     method: "GET",
