@@ -109,7 +109,7 @@ function fiveDayForecast(city) {
 }
 
 function getUvIndex(latitude, longitude) {
-  var queryUrl = `http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${latitude}&lon=${longitude}`;
+  var queryUrl = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${latitude}&lon=${longitude}`;
 
   $.ajax({
     method: "GET",
